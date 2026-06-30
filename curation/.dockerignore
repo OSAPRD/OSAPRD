@@ -1,0 +1,52 @@
+.git
+.git/*
+
+# Python/cache artifacts
+**/__pycache__/
+**/*.py[cod]
+**/.mypy_cache/
+**/.pytest_cache/
+**/.ruff_cache/
+.codex-py310deps/
+.codex-pydeps/
+.codex-py312-topic/
+.analysis-venv/
+.venv/
+venv/
+
+# IDE/editor and OS artifacts
+.vscode/
+.idea/
+**/.DS_Store
+
+# Local outputs, checkpoints, and logs for the flat ~/curation server layout
+output/
+runs/
+checkpoints/
+tmp/
+curation-data/
+curation-data-parquet/
+multimetric-output/
+longitudinal-refactoring-output/
+recompute-longitudinal-outputs/
+extraction/data/
+post-processing/analysis/output/
+post-processing/upload-data/output/
+post-processing/upload-data/.cache/
+post-processing/runs/
+post-processing/output/
+**/*.log
+**/*.parquet
+**/*.csv
+**/*.jsonl
+
+# Heavy local tool caches/vendor sources not needed in the upload image
+tools/downloads/
+tools/downloads/**
+tools/src/
+tools/src/**
+tools/vendors/**
+tools/runtime/nodetools/
+tools/runtime/nodetools/**
+tools/runtime/refactoringminerpp/
+tools/runtime/refactoringminerpp/**

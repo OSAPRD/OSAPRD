@@ -1,0 +1,24 @@
+.git
+.venv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+
+# Local Python/tool caches do not affect the container runtime.
+.pytest_cache
+.mypy_cache
+.ruff_cache
+
+# Keep large local datasets and generated package outputs out of Docker context.
+data
+runs
+outputs
+.huggingface
+*.sqlite3
+*.parquet
+
+# Frontend/build artifacts can appear in the monorepo but are unused here.
+node_modules
+dist
+build

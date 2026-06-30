@@ -1,0 +1,58 @@
+.git
+.git/*
+
+# Dockerfile-specific ignore file for builds launched from the repository root.
+# Keep only analysis code plus the small curation taxonomy configs copied below.
+
+# Python/cache artifacts
+**/__pycache__/
+**/*.py[cod]
+**/.mypy_cache/
+**/.pytest_cache/
+**/.ruff_cache/
+.venv/
+venv/
+env/
+env-*/
+venv-*/
+
+# IDE/editor and OS artifacts
+.vscode/
+.idea/
+**/.DS_Store
+
+# Local outputs and mounted data
+data/
+Data/
+output/
+runs/
+post-processing/analysis/output/
+post-processing/analysis/runs/
+post-processing/analysis/input/
+post-processing/analysis/.cache/
+**/*.parquet
+**/*.jsonl
+**/*.log
+curation-outputs/
+analysis-output/
+
+# Other post-processing stages are run separately.
+post-processing/topic-classification/
+post-processing/upload-curation-data/
+post-processing/upload-extraction-data/
+
+# Only curation taxonomy config is needed by analysis.
+curation/
+!curation/
+curation/*
+!curation/__init__.py
+!curation/config/
+curation/config/*
+!curation/config/refactoring_taxonomy_config.py
+!curation/config/code_smell_taxonomy_config.py
+!curation/config/code_smell_standardization_config.py
+
+# Large tooling and dependencies are not needed for analysis.
+node_modules/
+dist/
+build/

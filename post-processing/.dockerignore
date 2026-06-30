@@ -1,0 +1,45 @@
+.git
+.git/*
+
+# Python/cache artifacts
+**/__pycache__/
+**/*.py[cod]
+**/.mypy_cache/
+**/.pytest_cache/
+**/.ruff_cache/
+
+# Local virtual environments and dependency caches
+.venv/
+venv/
+env/
+env-*/
+venv-*/
+../.codex-py312-topic/
+../.codex-py310deps/
+../.codex-pydeps/
+
+# Editor/OS artifacts
+.vscode/
+.idea/
+**/.DS_Store
+
+# Local/generated post-processing outputs
+runs/
+output/
+analysis/output/
+upload-data/output/
+upload-data/.cache/
+topic-classification/model-output/
+topic-classification/runs/
+topic-classification/wiki-cache/
+
+# Large local inputs and generated model artifacts should be mounted.
+topic-classification/training-data/
+topic-classification/data-preparation/raw-frequency/*
+!topic-classification/data-preparation/raw-frequency/README.md
+
+# Generated data files are not needed in the runtime image.
+**/*.parquet
+**/*.jsonl
+**/*.log
+

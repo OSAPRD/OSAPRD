@@ -1,0 +1,10 @@
+# Stage-scoped runtime dependencies for parquet staging and Hugging Face upload.
+
+# Hugging Face dataset repository creation and large-folder upload.
+huggingface_hub==0.25.2
+
+# Pinned parquet stack shared with extraction/curation. Keep numpy pinned below
+# the yanked 2.4.0 release while pandas/pyarrow are pinned to tested versions.
+numpy==2.3.5
+pandas==2.3.3
+pyarrow==22.0.0

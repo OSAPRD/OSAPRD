@@ -1,0 +1,12 @@
+numpy<2
+scipy
+statsmodels
+matplotlib
+seaborn
+pandas
+pyarrow
+multimetric
+scikit-learn
+joblib
+nltk
+git+https://github.com/casics/spiral.git#egg=spiral

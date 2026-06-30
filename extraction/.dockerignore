@@ -1,0 +1,37 @@
+# Python/cache artifacts
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+
+# Local virtual environments
+.venv/
+venv/
+
+# Generated extraction outputs. Keep source JSON fixtures/configs available for
+# future tests by excluding only known local-output artifacts instead of every
+# *.json file.
+Data/
+data/
+outputs/
+checkpoints/
+journal/
+**/Data/
+**/data/
+**/outputs/
+**/checkpoints/
+**/journal/
+**/manifest.json
+**/extraction_run_manifest.json
+**/*.parquet
+**/*.jsonl
+**/*.log
+
+# Local VCS/editor metadata and credentials should never enter the image.
+**/.git/
+**/.DS_Store
+.env
+.env.*
+*.pem
+*.key

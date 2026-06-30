@@ -1,0 +1,17 @@
+# Runtime dependencies for the curation pipeline.
+
+# Local parquet/analysis IO.
+numpy==2.3.5
+bottleneck==1.6.0
+numexpr==2.14.1
+pandas==2.3.3
+pyarrow==22.0.0
+python-dateutil==2.9.0.post0
+pytz==2025.2
+six==1.17.0
+tzdata==2025.3
+
+# Multimetric maintainability backend and its runtime dependencies.
+chardet==7.4.3
+multimetric==2.4.4
+pygments==2.20.0

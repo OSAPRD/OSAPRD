@@ -1,0 +1,78 @@
+.git
+.git/*
+
+# Python/cache artifacts
+**/__pycache__/
+**/*.py[cod]
+**/.mypy_cache/
+**/.pytest_cache/
+**/.ruff_cache/
+.codex-py310deps/
+.codex-py312-topic/
+.codex-pydeps/
+.analysis-venv/
+.docker-codex/
+.docker-codex-config/
+.venv/
+venv/
+
+# IDE/editor and OS artifacts
+.vscode/
+.idea/
+**/.DS_Store
+
+# Local outputs, checkpoints, and logs
+# Support both context roots:
+# - repo root (paths like curation/...)
+# - curation root (paths like runs/...)
+curation/output/
+output/
+analysis-output/
+longitudinal-refactoring-output/
+recompute-longitudinal-outputs/
+tmp-benchmark*/
+tmp/
+curation/checkpoints/
+checkpoints/
+curation/runs/
+runs/
+data/
+curation-data/
+curation-data-parquet/
+multimetric-output/
+hatch-pets/
+.agents/
+.codex/
+curation/data/
+extraction/data/
+post-processing/analysis/output/
+post-processing/upload-data/output/
+post-processing/upload-data/.cache/
+post-processing/runs/
+post-processing/output/
+post-processing/topic-classification/training-data/
+post-processing/topic-classification/model-output/
+post-processing/topic-classification/runs/
+post-processing/topic-classification/wiki-cache/
+post-processing/topic-classification/data-preparation/generated/
+post-processing/topic-classification/data-preparation/raw-frequency/*
+!post-processing/topic-classification/data-preparation/raw-frequency/README.md
+**/*.log
+**/*.parquet
+**/*.csv
+**/*.jsonl
+
+# Heavy local tool caches/vendor sources not needed in image
+# Support both context roots (repo root vs curation root).
+curation/tools/downloads/
+tools/downloads/
+curation/tools/downloads/**
+tools/downloads/**
+curation/tools/vendors/**
+tools/vendors/**
+curation/tools/src/**
+tools/src/**
+curation/tools/runtime/nodetools/**
+tools/runtime/nodetools/**
+curation/tools/runtime/refactoringminerpp/**
+tools/runtime/refactoringminerpp/**

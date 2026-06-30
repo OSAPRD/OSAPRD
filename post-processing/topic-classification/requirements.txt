@@ -1,0 +1,15 @@
+# Topic-classification runtime dependencies.
+#
+# NumPy is pinned below 2.x because the local pandas/scikit-learn stack used by
+# this package is validated against the NumPy 1.x ABI. The Dockerfile installs
+# these exact versions before downloading the required NLTK corpora.
+duckdb==1.5.3
+joblib==1.5.3
+nltk==3.9.2
+numpy==1.26.4
+pandas==3.0.3
+requests==2.32.5
+scikit-learn==1.8.0
+scipy==1.17.1
+# Spiral/Ronin provides identifier splitting for repository and file-name text.
+git+https://github.com/casics/spiral.git#egg=spiral

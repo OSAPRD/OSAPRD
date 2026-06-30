@@ -1,0 +1,6 @@
+# Runtime dependencies for the stand-alone analysis package.
+# Keep this small: analysis streams parquet, computes statistics, and renders plots.
+matplotlib==3.9.4
+numpy==1.26.4
+pyarrow==17.0.0
+scipy==1.13.1

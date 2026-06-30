@@ -1,0 +1,35 @@
+# Docker builds should contain only code and small static metadata. Extraction
+# parquet, staging outputs, and curation tools are mounted at runtime.
+
+.git
+.git/
+
+# Python/cache artifacts
+**/__pycache__/
+**/*.py[cod]
+**/.mypy_cache/
+**/.pytest_cache/
+**/.ruff_cache/
+.venv/
+venv/
+.codex-py310deps/
+.codex-pydeps/
+
+# Local outputs and large source data should be mounted, not baked in.
+output/
+runs/
+checkpoints/
+tmp/
+extraction/data/
+post-processing/upload-extraction-data/output/
+post-processing/upload-extraction-data/.cache/
+post-processing/runs/
+post-processing/output/
+**/*.log
+**/*.parquet
+**/*.csv
+**/*.jsonl
+
+# Tool caches are unrelated to publishing extraction parquet.
+tools/
+curation/tools/

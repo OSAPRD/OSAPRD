@@ -1,0 +1,7 @@
+# Hugging Face repository creation and upload.
+huggingface_hub==0.25.2
+
+# Parquet schema handling, table conversion, and numerical null coercion.
+numpy==2.2.6
+pandas==2.3.3
+pyarrow==22.0.0
