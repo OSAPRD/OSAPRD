@@ -1,4 +1,4 @@
-# Merged, but Maintained? Refactoring and Maintainability in Agent-Authored Pull Requests
+# Beyond Merging: Refactoring and Code Quality Signals in Agent-Authored Pull Requests
 
 This repository contains the extraction, curation, topic-classification,
 analysis, and data-publication code used to study refactoring and
@@ -84,10 +84,20 @@ Curation computes:
   Cppcheck, and clang-tidy where the relevant language/tool is available.
 - Maintainability metrics from Multimetric for maintainability index,
   cyclomatic complexity, Halstead volume, fan out, comment ratio, and LOC.
-- Duplicated-lines density from this repository's custom deterministic
-  implementation.
-- Future-snapshot metrics by tracking selected PRs through later snapshots; the
-  active curation pipeline does not rerun refactoring tools on future snapshots.
+
+
+| Tool                                                                  | Used for                                 | Version                                                                   | Runtime/config files for this tool                                       |
+| --------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| [RefactoringMiner](https://github.com/tsantalis/RefactoringMiner)     | Java and Python refactoring detection    | `3.1.4`                                                                   | `curation/README.md`, `curation/config/refactoring_config.py`            |
+| [RefDiff](https://github.com/aserg-ufmg/RefDiff)                      | JavaScript refactoring detection         | `2.0.0`                                                                   | `curation/README.md`, `curation/config/refactoring_config.py`            |
+| [RefactoringMiner++](https://github.com/benzoinoo/RefactoringMinerPP) | C++ refactoring detection                | No release tags; branch commit `e49dcd2fac61f068a436ee52d5b66215561e2f40` | `curation/Dockerfile`, `curation/config/refactoring_config.py`           |
+| [DesigniteJava](https://www.designite-tools.com/products-dj)          | Java code-smell detection                | `2.9.1`                                                                   | `curation/config/maintainability_config.py`                              |
+| [DesignitePython / DPy](https://www.designite-tools.com/products-dpy) | Python code-smell detection              | `0.0.8`                                                                   | `curation/config/maintainability_config.py`                              |
+| [PMD](https://pmd.github.io/)                                         | Java static-analysis/code-smell findings | `7.26.0`                                                                  | `curation/Dockerfile`, `curation/config/maintainability_config.py`       |
+| [ESLint](https://eslint.org/)                                         | JavaScript code-smell findings           | `10.6.0`                                                                  | `curation/Dockerfile`, `curation/config/maintainability_config.py`       |
+| [Cppcheck](https://cppcheck.sourceforge.io/)                          | C/C++ code-smell findings                | `2.21.0`                                                                  | `curation/Dockerfile`, `curation/config/maintainability_config.py`       |
+| [clang-tidy](https://clang.llvm.org/extra/clang-tidy/)                | C/C++ code-smell findings                | LLVM `22.1.8`                                                             | `curation/Dockerfile`, `curation/config/maintainability_config.py`       |
+| [Multimetric](https://github.com/priv-kweihmann/multimetric)          | Maintainability metrics                  | `2.4.4`                                                                   | `curation/requirements.txt`, `curation/config/maintainability_config.py` |
 
 ## Refactoring Taxonomy Mapping
 
